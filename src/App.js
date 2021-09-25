@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
+import SearchInput from './SearchInput';
+import Title from './Title';
+
 function App() {
+
+  const onSearch = (searchTerm) => {
+    alert(searchTerm);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title title='Search Title' />
+      <SearchInput onSearch={onSearch} />
     </div>
   );
 }
