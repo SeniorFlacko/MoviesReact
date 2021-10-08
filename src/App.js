@@ -11,19 +11,11 @@ function App() {
     alert(searchTerm);
   };
 
-  const crashingApp = () => {
-    alert(
-      "I'm going to crash!, Press Escape to see <ErrorBoundary /> again :)"
-    );
-  };
-
   return (
     <div className="App">
       <Title title="Search Title" />
       <SearchInput onSearch={onSearch} />
-      <ErrorBoundary>
-        <Button title="+ add movie" onClick={crashingApp} />
-      </ErrorBoundary>
+      <Button title="+ add movie" onClick={() => {}} />
     </div>
   );
 }
