@@ -29,9 +29,9 @@ const MOVIES_LIST: IMovie[] = [
     category: "Drama, Biography, Music",
     releaseDate: new Date("01-01-2003"),
     description:
-      "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hit men who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.—Soumitra",
-    duration: "2h 34min",
-    rate: "8.9",
+      "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer Freddie Mercury. ... Bohemian Rhapsody is a movie based on the true story of Queen's journey from the start of the rock band to their now-legendary 1985 performance at the Live Aid concert in Wembley Stadium",
+    duration: "1h 2min",
+    rate: "10",
   },
 ];
 
