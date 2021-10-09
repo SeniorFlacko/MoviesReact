@@ -1,9 +1,11 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
-
+body {
+  background: #232323;
+}
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -39,4 +41,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 49px;
+  /* identical to box height */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  text-align: left;
+  padding-bottom: 55px;
+}
+
+.container-header {
+  margin: 5px 120px;
+}
+
+.netflix-roulette {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #f65261;
+}
+
+.header-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 35px 35px 57px;
 }

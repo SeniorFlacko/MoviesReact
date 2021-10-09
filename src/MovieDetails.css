@@ -1,0 +1,102 @@
+.moviedetail-container {
+  margin: 20px 80px;
+}
+.moviedetails-container {
+  padding: 20px 35px 35px 57px;
+  display: flex;
+}
+.search-icon {
+  border: 2px solid #f65261;
+  box-sizing: border-box;
+  color: #f65261;
+  cursor: pointer;
+}
+
+.image-movie-container {
+}
+.movie-image {
+}
+.information-container {
+  margin-left: 60px;
+}
+.title-points {
+  display: flex;
+  margin-bottom: 20px;
+}
+.name-movie {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 49px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.movie-points {
+  margin-left: 25px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category-movie {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+.duration-year {
+  display: flex;
+  margin-bottom: 30px;
+}
+.year-movie {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #f65261;
+}
+.duration-movie {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #f65261;
+  margin-left: 50px;
+}
+.description-movie {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
