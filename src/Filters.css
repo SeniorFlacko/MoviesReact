@@ -1,0 +1,71 @@
+.filters-container {
+  background: #232323;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 130px;
+}
+
+.buttonsf-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-filter {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  background: transparent;
+  border: none;
+}
+
+.sort-container {
+}
+
+.sortby-label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.888889px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.select-filter {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.888889px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background: transparent;
+  margin-left: 10px;
+  border: none;
+}
+
+.select-filter option {
+  margin: 40px;
+  background: black;
+  color: #fff;
+  border: none;
+}

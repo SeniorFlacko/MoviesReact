@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import AppContextProvider from "./store/AppProvider";
+import { movie } from "./store/constants";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppContextProvider providerInitState={movie}>
+      <App />
+    </AppContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
