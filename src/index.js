@@ -5,12 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AppContextProvider from "./store/AppProvider";
 import { movie } from "./store/constants";
+import store from "./store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContextProvider providerInitState={movie}>
-      <App />
-    </AppContextProvider>
+    <Provider store={store}>
+      <AppContextProvider providerInitState={movie}>
+        <App />
+      </AppContextProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
