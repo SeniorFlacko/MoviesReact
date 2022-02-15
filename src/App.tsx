@@ -7,33 +7,14 @@ import DeleteModal from "./DeleteModal";
 import { useEffect, useState } from "react";
 import Header from "./Header";
 import Filters from "./Filters";
-import Movie from "./Movie";
-import { IMovie, State } from "./store/types";
+import { State } from "./store/types";
 import useAppContext from "./store/useAppContext";
 import MovieDetails from "./MovieDetails";
-
-const MOVIES_LIST: IMovie[] = [
-  {
-    image: "./assets/pulp.png",
-    name: "Pulp Fiction",
-    category: "Action & Adventure",
-    releaseDate: new Date("01-01-2004"),
-    description:
-      "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hit men who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.—Soumitra",
-    duration: "2h 34min",
-    rate: "8.9",
-  },
-  {
-    image: "./assets/rapsody.png",
-    name: "Bohemian Rhapsody",
-    category: "Drama, Biography, Music",
-    releaseDate: new Date("01-01-2003"),
-    description:
-      "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer Freddie Mercury. ... Bohemian Rhapsody is a movie based on the true story of Queen's journey from the start of the rock band to their now-legendary 1985 performance at the Live Aid concert in Wembley Stadium",
-    duration: "1h 2min",
-    rate: "10",
-  },
-];
+import { useSelector, useDispatch } from "react-redux";
+import { setMoviesList } from "./MoviesSlice";
+import { AppDispatch, RootState } from "./store";
+import useGetMoviesList from "./services/useGetMoviesList";
+import Movie from "./Movie";
 
 function App() {
   const onSearch = (searchTerm: any) => {
@@ -42,11 +23,19 @@ function App() {
 
   const [movieModalIsOpen, setMovieModalIsOpen] = useState(false);
   const [deleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
-  const [moviesList, setMoviesList] = useState<IMovie[]>(MOVIES_LIST);
+
+  const movsList = useSelector((state: RootState) => state.movies);
+
+  const dispatch: AppDispatch = useDispatch();
 
   const [mode, setMode] = useState("add");
 
-  const { currentMovie } = useAppContext() as State;
+  const { data: response } = useGetMoviesList();
+
+  useEffect(() => {
+    dispatch(setMoviesList(response?.data));
+    console.log(response?.data);
+  }, [response?.data]);
 
   let content = (
     <Header>
@@ -55,7 +44,12 @@ function App() {
           <b>netflix</b>roulette
         </div>
         <div>
-          <Button title="+ add movie" onClick={() => {}} />
+          <Button
+            title="+ add movie p"
+            onClick={async () => {
+              console.log(movsList);
+            }}
+          />
         </div>
       </div>
       <div className="container-header">
@@ -65,10 +59,10 @@ function App() {
     </Header>
   );
 
-  if (currentMovie.name) {
+  if (movsList.selectedMovie.title) {
     content = (
       <>
-        <MovieDetails {...currentMovie} />
+        <MovieDetails {...movsList.selectedMovie} />
       </>
     );
   }
@@ -82,9 +76,11 @@ function App() {
         style={{
           display: "flex",
           margin: "auto 100px",
+          flexFlow: "row wrap",
+          justifyContent: "center",
         }}
       >
-        {moviesList.map((movie) => {
+        {movsList?.movies?.map((movie) => {
           return <Movie {...movie} />;
         })}
       </div>

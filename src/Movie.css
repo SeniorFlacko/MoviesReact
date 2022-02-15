@@ -1,8 +1,11 @@
 .movie-container {
-  margin: 35px;
+  margin: 15px;
+  flex: 1;
 }
 .movie-image {
-  width: 230px;
+  width: -webkit-fill-available;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: fill-available;
   height: 390px;
   cursor: pointer;
 }
